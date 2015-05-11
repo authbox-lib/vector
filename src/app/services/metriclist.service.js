@@ -196,7 +196,7 @@
                     metricArr.push(value.name);
                 });
 
-                url = 'http://' + host + ':' + port + '/pmapi/' + context + '/_fetch?names=' + metricArr.join(',');
+                url = '/pmapi/' + context + '/_fetch?names=' + metricArr.join(',');
 
                 PMAPIService.getMetrics(context, metricArr)
                     .then(function (metrics) {
